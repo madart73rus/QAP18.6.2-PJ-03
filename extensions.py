@@ -29,6 +29,5 @@ class СurrencyConverter:
         r = requests.get(f'https://min-api.cryptocompare.com/data/price?fsym={base_ticker}&tsyms={quote_ticker}')
         total_base = json.loads(r.content)[keys[quote]]*amount
 
-        print(total_base)
-
+        
         return total_base
